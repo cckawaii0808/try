@@ -7,7 +7,7 @@
     tools:context=".RoomActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/chatbox"
+        android:id="@+id/chatboxlist"
         android:layout_width="311dp"
         android:layout_height="276dp"
         android:background="#E49696"
@@ -26,11 +26,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.919"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatbox"
+        app:layout_constraintTop_toBottomOf="@+id/chatboxlist"
         app:layout_constraintVertical_bias="0.072" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/chatbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -41,6 +41,6 @@
         app:layout_constraintEnd_toStartOf="@+id/bchatsend"
         app:layout_constraintHorizontal_bias="0.827"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/chatbox"
+        app:layout_constraintTop_toBottomOf="@+id/chatboxlist"
         app:layout_constraintVertical_bias="0.087" />
 </androidx.constraintlayout.widget.ConstraintLayout>
