@@ -1,15 +1,19 @@
 package com.ccplay.loginpage
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.core.content.ContentProviderCompat.requireContext
 import com.ccplay.loginpage.databinding.ActivityLoginBinding
 
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private val TAG = LoginActivity::class.java.simpleName
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
@@ -23,18 +27,13 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intent)
             } else {
                 Log.d(TAG, "密碼錯誤")
+                 AlertDialog.Builder(this)
+                    .setTitle("登入失敗")
+                    .setMessage("請重新嘗試")
+                    .setPositiveButton("ok", null)
+                    .show()
             }
 
-
-//            val username = binding.editTextTextPersonName.text.toString()
-//            val password = binding.editTextTextPassword.text.toString()
-//            if (username == "cc" &&
-//                password == "1234"
-//            ) {
-
-
-
-
-        }//
+        }
     }
 }
